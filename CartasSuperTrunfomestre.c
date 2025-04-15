@@ -46,6 +46,8 @@ scanf( "%d" , &pontosturisticos);
     int pontosturisticos2;
     float densidade2;
     float pibpercapita2;
+    float superpoder1;
+    float superpoder2;
 
 //dados 2 carta
 
@@ -80,6 +82,12 @@ pibpercapita = (pib) / populacao;
 densidade2 = (populacao2) / area2;
 pibpercapita2 = (pib2) / populacao2;
 
+//superpoderes
+
+superpoder1 = populacao + area + pib + pontosturisticos + pibpercapita + (1.0 / densidade);
+
+superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 + (1.0 / densidade2);
+
 
 
 // dados coletados
@@ -107,7 +115,8 @@ pibpercapita2 = (pib2) / populacao2;
     printf("O Pib Per Capita Da Cidade %s e: %.2f\n", cidade2, pibpercapita2);
     
 
-
+    printf("A Carta Com O Maior Super Poder é: %s\n", 
+        (superpoder1 > superpoder2) ? "Carta 1" : "Carta 2");
 
 
 
